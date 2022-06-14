@@ -9,7 +9,7 @@ app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
     res.render('home')
-    //res.render('home') does not work
+    
 })
 
 app.get('*', (req,res)=>{
