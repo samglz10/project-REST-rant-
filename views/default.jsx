@@ -1,5 +1,6 @@
 const React = require('react')
-const Def = ((htmnl) =>{
+
+const Def = ((html) =>{
 return (
     <html>
         <head>
@@ -11,3 +12,5 @@ return (
     </html>
 )
 })
+
+module.exports = Def
