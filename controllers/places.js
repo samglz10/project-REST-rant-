@@ -1,8 +1,8 @@
 const router = require('express').Router()
 
 // More code here in a moment, Coming from index.js
-app.get('/', (req,res) => {
-    let places = [{
+router.get('/', (req,res) => {
+     let places = [{
         name: 'H-Thai-ML',
         city: 'Seattle',
         state: 'WA',
@@ -15,8 +15,8 @@ app.get('/', (req,res) => {
         cuisines: 'Coffee, Bakery',
         pic: 'http://placekitten.com/250/250'
       }]
-      
-    res.send('GET /places')
-   //res.render('places/index',{places}) gives error of cannot find .default
+    //res.send('GET /places')
+   res.render('places/index', {places}) 
 })
+
 module.exports = router
