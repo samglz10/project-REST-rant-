@@ -2,10 +2,13 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
+// EXPRESS Settings
+app.set('views',__dirname +'/views')
 app.set('view engine','jsx')
 app.engine('jsx',require('express-react-views').createEngine())
+app.use(express.static('public'))
 
-// Part Five: Directions 4 
+// Controllers and Routes
 app.use('/places', require('./controllers/places'))
 
 
