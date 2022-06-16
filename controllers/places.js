@@ -3,17 +3,17 @@ const router = require('express').Router()
 // More code here in a moment, Coming from index.js
 router.get('/', (req,res) => {
      let places = [{
-        name: 'H-Thai-ML',
+        name: 'Night Life',
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/latenight.png'
       }, {
-        name: 'Coding Cat Cafe',
+        name: 'Bar',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/bar.png'
       }]
     //res.send('GET /places')
    res.render('places/index', {places}) 
