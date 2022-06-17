@@ -5,7 +5,8 @@ const home =  (()=>{
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
+                <h1>REST-Rant</h1>
+                <link rel="stylesheet" href="style.css"/>
                 <div>
                     <img className="home" src="/images/homepage.png" alt="Photo by Artur Rutkowski on Unsplash."/>
                 <div>
