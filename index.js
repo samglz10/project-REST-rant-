@@ -11,6 +11,10 @@ app.use(express.static('public'))
 // Controllers and Routes
 app.use('/places', require('./controllers/places'))
 
+//Parser Tool -Remember, when we send data with the POST verb, that data gets encrypted for its trip across the internet. Because it is protected this way while in transit, that makes it extra safe for usernames, passwords, and other sensitive data. However, it also means we will need an extra tool to decrypt that data for us.
+app.use(express.urlencoded({extended: true}))
+
+
 
 app.get('/', (req, res) => {
     res.render('home')
