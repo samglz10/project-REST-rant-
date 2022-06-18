@@ -1,12 +1,12 @@
 const React = require('react')
 const Def= require('../default')
 
-const new_form = (() => {
+const newForm = (() => {
     return(
         <Def>
             <main>
                 <h1>Add a New Place</h1>
-                <form method="POST" action="/places">
+                <form method="post" action="/places">
                 <div className="form-group">
                     <label htmlFor="name">Place Name</label>
                     <input className="form-control" id="name" name="name" required />
@@ -32,7 +32,6 @@ const new_form = (() => {
             </main>
         </Def>
     )
-
 })
 
-module.exports = new_form
+module.exports = newForm

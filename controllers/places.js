@@ -1,33 +1,31 @@
 const router = require('express').Router()
+const places =require('../models/places.js')
 
 // More code here in a moment, Coming from index.js
-
+// Part 5 step 2 - giving undefined in terminal
 router.post('/', (req, res) => {
-  console.log(req.body)
-  res.send('POST /places')
+  
+  if (!req.body.pic) {
+    //Default image if one is not provided - not reading image?
+    req.body.pic = "./public/images/defaultimage.png"
+  }
+  if (!req.body.city) {
+    req.body.city = 'Anytown'
+  }
+  if (!req.body.state) {
+    req.body.state ='USA'
+  }
+  places.push(req.body)
+  res.redirect('/places')
 })
-
 
 router.get('/new',(req,res)=>{
   res.render('places/new')
 })
 
 router.get('/', (req,res) => {
-    console.log(req.body)
-     let places = [{
-        name: 'Night Life',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: '/images/latenight.png'
-      }, {
-        name: 'Bar',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/images/bar.png'
-      }]
-    //res.send('GET /places')
+    //Part 6 step 4 -remove lines 22-34?
+
    res.render('places/index', {places}) 
 })
 
