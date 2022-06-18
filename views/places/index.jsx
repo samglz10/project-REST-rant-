@@ -5,7 +5,10 @@ const index = ((data) =>{
     let placesFormatted = data.places.map((place, idx) => {
         return (
           <div className="col-sm-6" key={idx}>
-            <h2>{place.name}</h2>
+            <h2><a href={`/places/${index}`}>
+              {place.name}
+              </a>
+            </h2>
             <p className="text-center">
               {place.cuisines}
             </p>
