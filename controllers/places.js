@@ -1,12 +1,9 @@
 const router = require('express').Router()
 const places =require('../models/places.js')
 
-// More code here in a moment, Coming from index.js
-// Part 5 step 2 - giving undefined in terminal
+
 router.post('/', (req, res) => {
-  
   if (!req.body.pic) {
-    //Default image if one is not provided - not reading image?
     req.body.pic = "./public/images/defaultimage.png"
   }
   if (!req.body.city) {
@@ -24,7 +21,6 @@ router.get('/new',(req,res)=>{
 })
 
 router.get('/', (req,res) => {
-    //Part 6 step 4 -remove lines 22-34?
 
    res.render('places/index', {places}) 
 })
@@ -56,6 +52,20 @@ router.delete('/:id', (req, res) => {
     res.redirect('/places')
   }
 })
+
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
+  }
+})
+
 
 
 module.exports = router
