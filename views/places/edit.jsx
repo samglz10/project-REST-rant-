@@ -16,14 +16,12 @@ const editForm = (data)=> {
                             className="form-control" 
                             id="name" name="name" 
                             value={data.place.name} 
-                            required/>
+                            required />
                         </div>
                     </div>
                     <div className="form-group">
-                        <div className="form-group col-sm-6">
                             <label htmlFor="pic">Place Picture</label>
                             <input className="form-control" id="pic" name="pic" />
-                        </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="city">City</label>

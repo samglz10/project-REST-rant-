@@ -52,7 +52,7 @@ router.delete('/:id', (req, res) => {
     res.redirect('/places')
   }
 })
-
+//Part 7 
 router.get('/:id/edit', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
@@ -92,11 +92,6 @@ router.put('/:id', (req, res) => {
       res.redirect(`/places/${id}`)
   }
 })
-
-
-
-
-
 
 
 module.exports = router
