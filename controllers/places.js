@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  console.log(req.body)
   db.Place.create(req.body)
   .then(() =>{
     res.redirect('/places')
@@ -26,7 +27,7 @@ router.post('/', (req, res) => {
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
-
+//2. On success, we will receive the appropriate place and we can pass that into the res.render(). Like earlier, we can use catch() as well.
 router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
   .then(place => {
