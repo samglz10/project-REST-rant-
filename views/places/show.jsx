@@ -1,6 +1,6 @@
 const React = require("react")
 const Def = require("../default")
-
+// left off part 2 step 4 missing show.jsx data
 const show = (data) => {
     return(
         <Def>
