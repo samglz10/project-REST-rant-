@@ -29,7 +29,12 @@ const newForm = (() => {
                 </div>
                 <div className="form-group">
                      <label htmlFor="founded">Founded Year</label>
-                     <input className="form-control" id="founded" name="founded" type="number" />
+                     <input 
+                        className="form-control"
+                        id="founded" 
+                        name="founded"
+                        type="number"
+                        value={new Date().getFullYear()>
                 </div>
                 <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
