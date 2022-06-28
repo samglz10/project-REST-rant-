@@ -34,8 +34,8 @@ const newForm = (() => {
                         id="founded" 
                         name="founded"
                         type="number"
-                        value={new Date().getFullYear()>
-                </div>
+                        value={new Date().getFullYear()}/>
+                 </div>
                 <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
             </main>

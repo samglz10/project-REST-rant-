@@ -30,7 +30,9 @@ router.get('/new', (req, res) => {
 //2. On success, we will receive the appropriate place and we can pass that into the res.render(). Like earlier, we can use catch() as well.
 router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
+  .populate('comments')
   .then(place => {
+      console.log(place.comments)
       res.render('places/show', { place })
   })
   .catch(err => {
@@ -47,6 +49,8 @@ router.delete('/:id', (req, res) => {
   res.send('DELETE /places/:id stub')
 })
 
+
+
 router.get('/:id/edit', (req, res) => {
   res.send('GET edit form stub')
 })
@@ -54,6 +58,32 @@ router.get('/:id/edit', (req, res) => {
 router.post('/:id/rant', (req, res) => {
   res.send('GET /places/:id/rant stub')
 })
+
+//Comment Form in
+router.post('/:id/comment', (req, res) => {
+  console.log(req.body)
+  db.Place.findById(req.params.id)
+  .then(place => {
+      db.Comment.create(req.body)
+      .then(comment => {
+          place.comments.push(comment.id)
+          place.save()
+          .then(() => {
+              res.redirect(`/places/${req.params.id}`)
+          })
+      })
+      .catch(err => {
+          res.render('error404')
+      })
+  })
+  .catch(err => {
+      res.render('error404')
+  })
+})
+
+
+
+
 
 router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
