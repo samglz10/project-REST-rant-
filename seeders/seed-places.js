@@ -23,5 +23,5 @@ db.Place.create([{
     console.log('Failure!', err)
     process.exit()
 })
-ocess.exit()
+process.exit()
 
