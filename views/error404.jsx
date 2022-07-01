@@ -5,7 +5,7 @@ const error404 =(()=>{
     return (
         <Def>
             <main>
-            <link rel="stylesheet" href="../style.css"></link>
+            <link rel="stylesheet" href="./public/style.css"></link>
                 <h1> 404: PAGE NOT FOUND</h1>
                 <p>Oops, sorry, we can't find this page!</p>
                 <div>

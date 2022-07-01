@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require ('mongoose')
 let commentSchema = new mongoose.Schema({
     author: { type: String, default: 'Anonymous' },
     rant: { type: Boolean, default: false },
@@ -8,4 +8,4 @@ let commentSchema = new mongoose.Schema({
 
 
 
-module.exports = mongoose.model('Comment', commentSchema)
+module.exports = mongoose.model('comment', commentSchema)
