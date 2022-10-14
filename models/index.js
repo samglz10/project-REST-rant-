@@ -1,7 +1,6 @@
 // Adds the dotenv package AKA MONGO_URI eviroment variable
-require('dotenv').config({
-  path: 'ENV_FILENAME'
-})
+require('dotenv').config()
+
 const mongoose = require('mongoose')
 //changed from mongoose.connect to 
 mongoose.connect(process.env.MONGO_URI, {
