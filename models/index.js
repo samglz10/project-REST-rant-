@@ -1,4 +1,4 @@
-// Adds the dotenv package AKA MONGO_URI eviroment variable
+// Adds the dotenv package AKA MONGO_URI enviroment variable
 require('dotenv').config()
 
 const mongoose = require('mongoose')
