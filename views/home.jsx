@@ -13,7 +13,7 @@ const home =  (()=>{
                     <a href="https://unsplash.com/@alienowicz">Artur Rutkowski</a> on <a href="https://unsplash.com/photos/4yzEtTQLdL4">Unsplash</a>
                 </div>
                 </div>
-                <a href= "/places">
+                <a href= "/places/show">
                     <button className="btn-primary"> Places Page</button>
                 </a>
             </main>
