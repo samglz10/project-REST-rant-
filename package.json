@@ -18,7 +18,8 @@
     "mongoose": "^6.4.0",
     "nodemon": "^2.0.18",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "vercel": "^28.7.2"
   },
   "nodemonConfig": {
     "ext": "js,html,json,jsx,mjs,css"
